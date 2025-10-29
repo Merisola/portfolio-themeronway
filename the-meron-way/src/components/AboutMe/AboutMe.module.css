@@ -1,0 +1,151 @@
+.about {
+  position: relative;
+  padding: 100px 0;
+}
+
+.aboutImageWrapper {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.aboutImageWrapper img {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: block;
+}
+
+.missionCard {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  background-color: var(--accent-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.missionIcon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.missionIcon i {
+  font-size: 1.75rem;
+  color: var(--contrast-color);
+}
+
+.missionContent h4 {
+  font-size: 1.25rem;
+  color: var(--contrast-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.missionContent p {
+  font-size: 0.95rem;
+  color: var(--contrast-color);
+  margin-bottom: 0;
+}
+
+/* About Text Content */
+.tagBadge {
+  display: inline-block;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.aboutContent h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 991px) {
+  .aboutContent h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.aboutInfo p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.aboutInfo p:last-child {
+  margin-bottom: 0;
+}
+
+/* Core Values */
+.valuesTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.valuesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: color-mix(in srgb, var(--background-color), var(--default-color) 5%);
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.valueItem:hover {
+  transform: translateY(-3px);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.valueIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.valueIcon i {
+  color: var(--contrast-color);
+  font-size: 14px;
+}
+
+.valueText {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 991px) {
+  .aboutContent {
+    margin-top: 3rem;
+  }
+}

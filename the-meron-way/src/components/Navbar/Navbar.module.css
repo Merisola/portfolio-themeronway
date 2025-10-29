@@ -1,0 +1,95 @@
+/* Base navmenu styles for mobile */
+.navmenu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  width: 300px;
+  z-index: 997;
+  background-color: var(--nav-mobile-background-color);
+  transition: right 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-active {
+  right: 0;
+}
+
+.navList {
+  padding: 20px 10px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navmenu a {
+  color: var(--nav-dropdown-color);
+  padding: 15px 20px;
+  font-family: var(--nav-font);
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  color: var(--nav-dropdown-hover-color);
+}
+
+.mobileToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  z-index: 998;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.mobileToggle:hover {
+  color: var(--nav-hover-color);
+}
+
+/* Desktop / Web View */
+@media (min-width: 1200px) {
+  .navmenu {
+    position: static; /* remove fixed positioning */
+    width: auto;
+    height: auto;
+    display: flex !important;
+    flex-direction: row;
+    background-color: transparent; /* match header background */
+    right: 0;
+    top: auto;
+    bottom: auto;
+    z-index: 1;
+    overflow: visible;
+    justify-content: center; /* center the links horizontally */
+    gap: 3rem; /* larger gap between links for a clean desktop layout */
+    padding: 0; /* remove extra padding from mobile layout */
+  }
+
+  .navList {
+    flex-direction: row;
+    gap: 2.5rem; /* good spacing between desktop links */
+    padding: 0;
+    margin: 0;
+  }
+
+  .navmenu a {
+    padding: 10px 0; /* smaller vertical padding for desktop */
+    font-size: 18px;
+  }
+
+  .mobileToggle {
+    display: none; /* hide toggle on desktop */
+  }
+}
