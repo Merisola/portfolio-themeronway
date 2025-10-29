@@ -1,81 +1,63 @@
 import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from "./CallToAction.module.css";
-import { Link } from "react-router-dom";
 
 const CTA = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleClick = (e, targetId) => {
+    e.preventDefault();
+
+    if (location.pathname === "/") {
+      const el = document.getElementById(targetId);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/#${targetId}`);
+      // small delay to allow DOM to render before scrolling
+      setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
-    <section id="call-to-action" className={styles.callToAction}>
-      <div className="container">
-        <div className={styles.ctaWrapper}>
-          <div className="row align-items-center">
-            {/* Text Content */}
-            <div className="col-lg-7">
-              <div className={styles.ctaContent}>
-                <span className={styles.badge}>Experienced Developer</span>
-                <h2 className="mt-4 mb-4">
-                  Let's Build Something Amazing Together
-                </h2>
-                <p className="mb-4">
-                  I’m Meron Solomon, a full-stack developer with 2+ years of
-                  experience in web development, project management, and
-                  biomedical engineering. I love helping and working with
-                  passionate clients to bring ideas to life.
-                </p>
+    <section id="cta" className={styles.callToAction}>
+      <div className={styles.ctaWrapper}>
+        <h2 className={styles.headline}>Step Outside the Ordinary</h2>
 
-                <div className="row g-3 mb-4">
-                  <div className="col-md-6">
-                    <div className={styles.benefitItem}>
-                      <div className={styles.iconBox}>
-                        <i className="bi bi-briefcase-fill"></i>
-                      </div>
-                      <div>
-                        <h5>2+ Years Experience</h5>
-                        <p>Professional development and project management.</p>
-                      </div>
-                    </div>
-                  </div>
+        <p className={styles.quote}>
+          “Move out of your comfort zone. You can only grow if you are willing
+          to feel awkward and uncomfortable when you try something new.”
+          <span>- Brian Tracy</span>
+        </p>
 
-                  <div className="col-md-6">
-                    <div className={styles.benefitItem}>
-                      <div className={styles.iconBox}>
-                        <i className="bi bi-award-fill"></i>
-                      </div>
-                      <div>
-                        <h5>Certificates</h5>
-                        <p>
-                          Check my achievements <Link to="/resume">here</Link>.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <p className={styles.bodyText}>
+          I’m all about exploring, creating, and connecting with people who want
+          to make something that matters. Whether it’s a bold project, a
+          creative idea, or a tiny spark of change—let’s bring it to life.
+        </p>
 
-                <div className={styles.actionButtons}>
-                  <a href="#contact" className="btn btn-primary">
-                    Hire Me
-                  </a>
-                  <a href="#contact" className="btn btn-outline-secondary">
-                    Contact Me
-                  </a>
-                </div>
-              </div>
-            </div>
+        <p className={styles.closingLine}>
+          So hit me up if you’re one of the different.
+        </p>
 
-            {/* Image / Illustration */}
-            <div className="col-lg-5">
-              <div className={styles.ctaImage}>
-                <img
-                  src="/assets/img/hero/meron-portfolio.webp"
-                  alt="Meron Solomon Portfolio"
-                  className="img-fluid"
-                />
-                <div className={styles.floatingBadge}>
-                  <i className="bi bi-star-fill"></i>
-                  <span>2+ Years Experience</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className={styles.buttons}>
+          <Link
+            to="/#contact"
+            onClick={(e) => handleClick(e, "contact")}
+            className={`${styles.btn} ${styles.primary}`}
+          >
+            Let’s Work Together
+          </Link>
+          <Link
+            to="/#portfolio"
+            onClick={(e) => handleClick(e, "portfolio")}
+            className={`${styles.btn} ${styles.outline}`}
+          >
+            See My Work
+          </Link>
         </div>
       </div>
     </section>

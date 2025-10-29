@@ -1,145 +1,83 @@
 .callToAction {
-  position: relative;
-  padding: 50px 0 200px; /* this adds space for the card below */
-  scroll-margin-bottom: 100px;
-  background: linear-gradient(
-    170deg,
-    var(--background-color) 0%,
-    color-mix(in srgb, var(--background-color), var(--accent-color) 5%) 100%
-  );
+  padding: 80px 0;
+  background: var(--background-color);
+  text-align: center;
 }
 
 .ctaWrapper {
-  position: relative;
-  border-radius: 20px;
-  background-color: var(--surface-color);
-  box-shadow: 0 20px 60px
-    color-mix(in srgb, var(--accent-color), transparent 92%);
-  overflow: hidden;
-  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.ctaContent {
-  position: relative;
-  z-index: 2;
-}
-
-.badge {
-  display: inline-block;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.ctaContent h2 {
-  font-size: 2.5rem;
+.headline {
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--heading-color);
-  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-family: var(--heading-font);
 }
 
-.ctaContent p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 1.05rem;
+.quote {
+  font-style: italic;
+  color: var(--default-color);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
-.benefitItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+.quote span {
+  display: block;
+  margin-top: 8px;
+  font-weight: 500;
+  color: var(--accent-color);
 }
 
-.iconBox {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  background: linear-gradient(
-    135deg,
-    var(--accent-color) 0%,
-    color-mix(in srgb, var(--accent-color), transparent 20%) 100%
-  );
-  color: var(--contrast-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  font-size: 1.25rem;
+.bodyText {
+  color: var(--default-color);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
-.actionButtons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.actionButtons .btn {
-  padding: 0.75rem 2rem;
+.closingLine {
   font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
-  transform: translateY(-3px);
-}
-
-.btn-outline-secondary {
-  background-color: transparent;
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 30%);
   color: var(--accent-color);
-}
-
-.btn-outline-secondary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  transform: translateY(-3px);
-}
-
-.ctaImage {
-  position: relative;
-}
-
-.floatingBadge {
-  position: absolute;
-  top: 20%;
-  right: 0;
-  background-color: var(--surface-color);
-  border-radius: 12px;
-  padding: 0.5rem 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-}
-
-.floatingBadge i {
-  color: var(--accent-color);
+  margin-bottom: 2rem;
   font-size: 1.1rem;
 }
 
-.floatingBadge span {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--heading-color);
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.callToAction::after {
-  content: "";
-  display: block;
-  clear: both;
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.primary {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-3px);
+}
+
+.outline {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.outline:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-3px);
 }

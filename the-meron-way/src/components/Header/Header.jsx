@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
 
@@ -21,14 +22,16 @@ const Header = () => {
       }`}
     >
       <div className="container-fluid d-flex align-items-center justify-content-between">
-        <a
-          href="#hero"
+        <Link
+          to="/"
           className="logo d-flex align-items-center text-decoration-none"
         >
-          {/* Optional: replace text with an image later if you want */}
+          {/* Option 1: Image Logo */}
           {/* <img src="/assets/img/logo.webp" alt="MeriSola Logo" /> */}
+
+          {/* Option 2: Text Logo */}
           <h1 className="sitename mb-0">MeriSola</h1>
-        </a>
+        </Link>
 
         {/* Navbar Component */}
         <Navbar />

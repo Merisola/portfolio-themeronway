@@ -5,34 +5,35 @@ import apple_react from "../../assets/img/apple_react.jpg";
 import evangadi_forum from "../../assets/img/evangadi_forum.jpg";
 import netflix from "../../assets/img/netflix.jpg";
 import color from "../../assets/img/color.jpg";
+import movie from "../../assets/img/movie.jpg";
 
 const projects = [
   {
     title: "Amazon Clone",
     category: "Fullstack",
     img: amazon,
-    demo: "https://amazon-clone-demo.com",
+    demo: "https://amazon-clone-six-xi-93.vercel.app",
     repo: "https://github.com/Merisola/amazon-clone",
   },
   {
     title: "Color Game",
     category: "React Native",
     img: color,
-    demo: "https://color-game-demo.com",
+    // demo: "https://color-game-demo.com",
     repo: "https://github.com/Merisola/color-guessing-game",
   },
   {
     title: "Netflix Clone",
     category: "Web App",
     img: netflix,
-    demo: "https://netflix-clone-demo.com",
+    demo: "https://netflix-clone-weld-nu.vercel.app/",
     repo: "https://github.com/Merisola/netflix-clone",
   },
   {
     title: "Apple Clone",
     category: "Web App",
     img: apple_react,
-    demo: "https://apple-clone-demo.com",
+    // demo: "https://apple-clone-demo.com",
     repo: "https://github.com/Merisola/apple-clone",
   },
   {
@@ -41,6 +42,13 @@ const projects = [
     img: evangadi_forum,
     demo: "https://evangadi-forum-demo.com",
     repo: "https://github.com/Merisola/evangadi-forum",
+  },
+  {
+    title: "Movie Recommendations App",
+    category: "Next.js Web App",
+    img: movie,
+    demo: "https://movie-recommendation-app-murex.vercel.app/",
+    repo: "https://github.com/Merisola/movie-recommendation-app",
   },
 ];
 

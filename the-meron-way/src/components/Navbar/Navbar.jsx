@@ -1,12 +1,25 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import styles from "./Navbar.module.css"; // CSS module
+import { Link, useLocation } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   const [mobileActive, setMobileActive] = useState(false);
+  const location = useLocation();
 
   const toggleMobileNav = () => {
     setMobileActive(!mobileActive);
+  };
+
+  const handleScroll = (e, targetId) => {
+    setMobileActive(false);
+
+    if (location.pathname === "/") {
+      e.preventDefault();
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -20,49 +33,103 @@ const Navbar = () => {
         className={`list-unstyled d-flex flex-column flex-xl-row gap-4 mb-0 ${styles.navList}`}
       >
         <li>
-          <a
-            href="#hero"
-            className="text-decoration-none"
-            onClick={() => setMobileActive(false)}
-          >
-            Home
-          </a>
+          {location.pathname === "/" ? (
+            <a
+              href="#hero"
+              className="text-decoration-none"
+              onClick={(e) => handleScroll(e, "hero")}
+            >
+              Home
+            </a>
+          ) : (
+            <Link
+              to="/"
+              className="text-decoration-none"
+              onClick={() => setMobileActive(false)}
+            >
+              Home
+            </Link>
+          )}
         </li>
+
         <li>
-          <a
-            href="#about"
-            className="text-decoration-none"
-            onClick={() => setMobileActive(false)}
-          >
-            About
-          </a>
+          {location.pathname === "/" ? (
+            <a
+              href="#about"
+              className="text-decoration-none"
+              onClick={(e) => handleScroll(e, "about")}
+            >
+              About
+            </a>
+          ) : (
+            <Link
+              to="/#about"
+              className="text-decoration-none"
+              onClick={() => setMobileActive(false)}
+            >
+              About
+            </Link>
+          )}
         </li>
+
         <li>
-          <a
-            href="#skills"
-            className="text-decoration-none"
-            onClick={() => setMobileActive(false)}
-          >
-            Skills
-          </a>
+          {location.pathname === "/" ? (
+            <a
+              href="#skills"
+              className="text-decoration-none"
+              onClick={(e) => handleScroll(e, "skills")}
+            >
+              Skills
+            </a>
+          ) : (
+            <Link
+              to="/#skills"
+              className="text-decoration-none"
+              onClick={() => setMobileActive(false)}
+            >
+              Skills
+            </Link>
+          )}
         </li>
+
         <li>
-          <a
-            href="#portfolio"
-            className="text-decoration-none"
-            onClick={() => setMobileActive(false)}
-          >
-            Portfolio
-          </a>
+          {location.pathname === "/" ? (
+            <a
+              href="#portfolio"
+              className="text-decoration-none"
+              onClick={(e) => handleScroll(e, "portfolio")}
+            >
+              Portfolio
+            </a>
+          ) : (
+            <Link
+              to="/#portfolio"
+              className="text-decoration-none"
+              onClick={() => setMobileActive(false)}
+            >
+              Portfolio
+            </Link>
+          )}
         </li>
+
         <li>
-          <a
-            href="#contact"
-            className="text-decoration-none"
-            onClick={() => setMobileActive(false)}
-          >
-            Contact
-          </a>
+          {location.pathname === "/" ? (
+            <a
+              href="#contact"
+              className="text-decoration-none"
+              onClick={(e) => handleScroll(e, "contact")}
+            >
+              Contact
+            </a>
+          ) : (
+            <Link
+              to="/#contact"
+              className="text-decoration-none"
+              onClick={() => setMobileActive(false)}
+            >
+              Contact
+            </Link>
+          )}
         </li>
       </ul>
 

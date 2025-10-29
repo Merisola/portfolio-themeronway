@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Hero.module.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import photo2 from "../../assets/img/photo_2.jpeg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -62,14 +63,13 @@ const Hero = () => {
             </div>
 
             <div className={styles.heroButtons}>
-              <a
-                href="/MeronSolomon_Resume.pdf"
+              <Link
+                to="/resume"
                 className={`btn btn-primary ${styles.primaryBtn}`}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Resume <i className="bi bi-chevron-right"></i>
-              </a>
+              </Link>
+
               <a
                 href="#portfolio"
                 className={`btn btn-outline-secondary ${styles.secondaryBtn}`}

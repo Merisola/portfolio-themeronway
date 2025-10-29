@@ -1,16 +1,4 @@
-/**
-* Template Name: Visible
-* Template URL: https://bootstrapmade.com/visible-bootstrap-agency-template/
-* Updated: May 22 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 
 * {
   margin: 0;
@@ -25,7 +13,7 @@
   --nav-font: "Mukta", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+
 :root {
   --background-color: #070d1a; /* Background color for the entire website, including individual sections */
   --default-color: #e4edf5; /* Default color used for the majority of the text content across the entire website */
@@ -80,9 +68,7 @@
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -110,8 +96,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* # Global Header */
---------------------------------------------------------------*/ .header {
+.header {
   --background-color: rgba(255, 255, 255, 0);
   color: var(--default-color);
   background-color: var(--background-color);
